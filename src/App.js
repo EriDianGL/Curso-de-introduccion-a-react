@@ -1,31 +1,24 @@
-import logo from "./platzi.webp";
+import {TodoCounter} from './TodoCounter';
+import {TodoSearch} from './TodoSearch';
+import {TodoList} from './TodoList';
+import {TodoItem} from './TodoItem';
+import {CreateTodoButton} from './CreateTodoButton';
+import React from 'react';
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       {/* \\App structure(lo primero que debe sder creado es la estructura de la applicacion ¿Que componentes necesitamos?) */}
-      <TodoCounter />
-      <TodoSearch />
-
+      <TodoCounter completed={16} total={25}/>
+      <TodoSearch/>
       <TodoList>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        <TodoItem/>
+        <TodoItem/>
+        <TodoItem/>
       </TodoList>
-
-      <CreateTodoButton />
-    </div>
-  );
-}
-
-function TodoItem() {
-  return (
-    <li>
-      <span> v </span>
-      <p>Llorar con la Llorona</p>
-      <span> X </span>
-    </li>
+      <CreateTodoButton/>
+    </React.Fragment>
   );
 }
 
