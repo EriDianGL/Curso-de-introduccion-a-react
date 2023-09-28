@@ -17,6 +17,7 @@ const defaultTodos = [
 function App() {
   return (
     <React.Fragment>
+      {/* <React.Fragment> */}
       {/* App structure(lo primero que debe sder creado es la estructura de la applicacion ¿Que componentes necesitamos?) */}
       <TodoCounter completed={16} total={25} />
       <TodoSearch />
@@ -36,6 +37,7 @@ function App() {
       </TodoList>
       <CreateTodoButton />
     </React.Fragment>
+    /* </React.Fragment> */
   );
 }
 
