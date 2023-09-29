@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+:root {
+  --deep-purple: #5f33e1;
+  --pinch-purple: #f9f8ff;
+  --light-purple: #cfc0fe;
+  --white: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.backgroundContainer {
+  height: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      210deg,
+      rgba(232, 91, 91, 0.9),
+      rgba(255, 255, 255, 0.4) 18.71%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(172, 234, 253, 1),
+      rgba(255, 255, 255, 0.1) 55.71%
+    ),
+    linear-gradient(
+      348deg,
+      rgba(255, 211, 187, 0.8) 1%,
+      rgba(255, 255, 255, 0.3) 70%,
+      rgba(247, 91, 250, 1) 90.71%
+    );
+}
+.mainContainer {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
 }
 
-.App-header {
-  background-color: #233553;
-  min-height: 100vh;
+.addTodoContainer {
+  width: 561px;
+  height: 858px;
+  margin: 35px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  border-radius: 34px;
+  background: #fff;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+}
+
+.titles {
+  font-size: 40px;
+  margin-bottom: 32px;
+}
+.bodyFont {
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+
+.taskIllustracion {
+  width: 400px;
+  height: 400px;
+}
+input {
+  height: 28px;
+  border-radius: 10px;
+  border: 1px solid var(--light-purple);
+  margin-bottom: 40px;
+  padding: 16px;
+}
+input:focus {
+  background-color: var(--pinch-purple);
+  border: 1px solid var(--deep-purple);
+}
+button {
+  width: 50%;
+  background-color: var(--deep-purple);
+  border-radius: 10px;
+  border: none;
   color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
 }
-
-.App-link {
-  color: #97ca3f;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoListContainer {
 }
