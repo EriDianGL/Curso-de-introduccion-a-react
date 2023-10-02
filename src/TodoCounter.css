@@ -1,6 +1,10 @@
-h1 .todoListContainer {
-  font-size: "24px";
-  text-align: "center";
-  margin: 0;
-  padding: 48px;
+.counter {
+  font-weight: 800;
+  color: #5f33e1;
+}
+.counterText {
+  font-size: 24px;
+  margin-bottom: 28px;
+  text-align: center;
+  line-height: 32px;
 }

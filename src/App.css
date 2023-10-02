@@ -11,11 +11,12 @@ body {
 }
 
 .backgroundContainer {
-  height: 1000px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   background: linear-gradient(
       210deg,
       rgba(232, 91, 91, 0.9),
@@ -34,24 +35,26 @@ body {
     );
 }
 .mainContainer {
-  width: 90%;
+  width: 95%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
   border-radius: 34px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
 }
 
 .addTodoContainer {
-  width: 561px;
+  width: 30%;
   height: 858px;
-  margin: 35px;
+  margin: 35px 10px 35px 35px;
   padding: 32px;
   display: flex;
   flex-direction: column;
-
   border-radius: 34px;
   background: #fff;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
@@ -62,6 +65,7 @@ body {
   margin-bottom: 32px;
 }
 .bodyFont {
+  line-height: 32px;
   font-size: 24px;
   margin-bottom: 28px;
 }
@@ -75,11 +79,30 @@ input {
   border-radius: 10px;
   border: 1px solid var(--light-purple);
   margin-bottom: 40px;
-  padding: 16px;
+  padding: 12px 12px 8px 12px;
+  font-size: 18px;
+  color: var(--deep-purple);
+}
+input:active {
+  background-color: var(--pinch-purple);
+  border: 1.5px solid var(--deep-purple);
+}
+input:hover {
+  background-color: var(--pinch-purple);
+  border: 2px solid var(--deep-purple);
 }
 input:focus {
   background-color: var(--pinch-purple);
   border: 1px solid var(--deep-purple);
+}
+input::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--light-purple);
+}
+img {
+  margin: 40px;
+  align-self: center;
 }
 button {
   width: 50%;
@@ -87,12 +110,43 @@ button {
   border-radius: 10px;
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 12px 30px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
   font-weight: 600;
   font-size: 20px;
 }
+button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+button:focus:not(:active) {
+  box-shadow: rgba(155, 128, 236, 0.25) 0 0 0 0.125em;
+}
+
 .todoListContainer {
+  width: 60%;
+  height: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 40px 40px 40px 10px;
+}
+.todoContainer {
+  width: 631px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.TodoListUl {
+  padding: 0px;
 }

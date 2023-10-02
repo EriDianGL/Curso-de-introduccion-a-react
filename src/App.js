@@ -8,10 +8,10 @@ import React from "react";
 import "./App.css";
 /* Array (objetos) */
 const defaultTodos = [
-  { text: "cortar la cebolla", completed: true },
-  { text: "Tomar el curso de introduccion a React.JS", completed: false },
-  { text: "Llorar con la llorona", completed: false },
-  { text: "Comprar leche", completed: false },
+  { text: "Vacuum the living room and bedrooms.", completed: true },
+  { text: "Go for a 30-minute jog in the morning.", completed: false },
+  { text: "Create a budget and itinerary for the trip.", completed: false },
+  { text: "Set up an automatic payment for the phone bill.", completed: false },
   { text: "Enviar correo", completed: false },
 ];
 
@@ -36,8 +36,7 @@ function App() {
             ></img>
           </div>
           <div className="todoListContainer">
-            <h1>Today’s Tasks</h1>
-            <p>You've completed 1 of 4 tasks so far. Keep up the good work!</p>
+            <h1 className="titles">Today’s Tasks</h1>
             <TodoCounter completed={16} total={25} />
             <TodoSearch />
             <TodoList>
@@ -47,11 +46,13 @@ function App() {
               /*Funcion flecha es la version corto de una funcion "function(todo){return (<TodoItem/>)}" */}
               {defaultTodos.map((todo) => (
                 /*Key es una propiedad unica que muestra losdistintos objetos en un array, text es una la propieda React necesita para renderizar las listas teniendo cada una un identificador distinto */
-                <TodoItem
-                  key={todo.text}
-                  text={todo.text}
-                  completed={todo.completed}
-                />
+                <div className="todoContainer">
+                  <TodoItem
+                    key={todo.text}
+                    text={todo.text}
+                    completed={todo.completed}
+                  />
+                </div>
               ))}
             </TodoList>
           </div>
